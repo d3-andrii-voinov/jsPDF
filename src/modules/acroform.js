@@ -790,17 +790,17 @@
           }
         }
       });
-      Object.defineProperty(this, 'Fields', {
+      Object.defineProperty(this, 'Fields', Object.preventExtensions({
         enumerable: false,
         configurable: false,
         get: function () {
           return _Kids;
         }
-      });
+      }));
       
       // Default Appearance
       var _DA; 
-      Object.defineProperty(this, 'DA', {
+      Object.defineProperty(this, 'DA', Object.preventExtensions({
         enumerable: false,
         configurable: false,
         get: function () {
@@ -812,7 +812,7 @@
         set: function (value) {
           _DA = value;
         }
-      });
+      }));
     };
 
     inherit(AcroFormDictionary, AcroFormPDFObject);
@@ -828,7 +828,7 @@
       
       //Annotation-Flag See Table 165
       var _F = 4;
-      Object.defineProperty(this, 'F', {
+      Object.defineProperty(this, 'F', Object.preventExtensions({
         enumerable: false,
         configurable: false,
         get: function () {
@@ -841,7 +841,7 @@
             throw new Error('Invalid value "' + value + '" for attribute F supplied.');
           }
         }
-      });
+      }));
       
       /**
       * (PDF 1.2) If set, print the annotation when the page is printed. If clear, never print the annotation, regardless of wether is is displayed on the screen. 
@@ -851,7 +851,7 @@
       * @default true
       * @type {boolean}
       */
-      Object.defineProperty(this, 'showWhenPrinted', {
+      Object.defineProperty(this, 'showWhenPrinted', Object.preventExtensions({
         enumerable: true,
         configurable: true,
         get: function () {
@@ -864,10 +864,10 @@
             this.F = clearBitForPdf(_F, 3);
           }
         }
-      });
+      }));
 
       var _Ff = 0;
-      Object.defineProperty(this, 'Ff', {
+      Object.defineProperty(this, 'Ff', Object.preventExtensions({
         enumerable: false,
         configurable: false,
         get: function () {
@@ -880,10 +880,10 @@
             throw new Error('Invalid value "' + value + '" for attribute Ff supplied.');
           }
         }
-      });
+      }));
       
       var _Rect = [];
-      Object.defineProperty(this, 'Rect', {
+      Object.defineProperty(this, 'Rect', Object.preventExtensions({
         enumerable: false,
         configurable: false,
         get: function () {
@@ -899,7 +899,7 @@
             _Rect = [];
           }
         }
-      });
+      }));
 
       /**
       * The x-position of the field.
@@ -908,7 +908,7 @@
       * @default null
       * @type {number}
       */
-      Object.defineProperty(this, 'x', {
+      Object.defineProperty(this, 'x', Object.preventExtensions({
         enumerable: true,
         configurable: true,
         get: function () {
@@ -920,7 +920,7 @@
         set: function (value) {
           _Rect[0] = scale(value);
         }
-      });
+      }));
 
       /**
       * The y-position of the field.
@@ -929,7 +929,7 @@
       * @default null
       * @type {number}
       */
-      Object.defineProperty(this, 'y', {
+      Object.defineProperty(this, 'y', Object.preventExtensions({
         enumerable: true,
         configurable: true,
         get: function () {
@@ -941,7 +941,7 @@
         set: function (value) {
           _Rect[1] = scale(value);
         }
-      });
+      }));
 
       /**
       * The width of the field.
@@ -950,7 +950,7 @@
       * @default null
       * @type {number}
       */
-      Object.defineProperty(this, 'width', {
+      Object.defineProperty(this, 'width', Object.preventExtensions({
         enumerable: true,
         configurable: true,
         get: function () {
@@ -962,7 +962,7 @@
         set: function (value) {
           _Rect[2] = scale(value);
         }
-      });
+      }));
       
       /**
       * The height of the field.
@@ -971,7 +971,7 @@
       * @default null
       * @type {number}
       */
-      Object.defineProperty(this, 'height', {
+      Object.defineProperty(this, 'height', Object.preventExtensions({
         enumerable: true,
         configurable: true,
         get: function () {
@@ -983,10 +983,10 @@
         set: function (value) {
           _Rect[3] = scale(value);
         }
-      });
+      }));
 
       var _FT = "";
-      Object.defineProperty(this, 'FT', {
+      Object.defineProperty(this, 'FT', Object.preventExtensions({
         enumerable: true,
         configurable: false,
         get: function () {
@@ -1004,11 +1004,11 @@
               throw new Error('Invalid value "' + value +  '" for attribute FT supplied.');
           }
         }
-      });
+      }));
       
       var _T = null;
 
-      Object.defineProperty(this, 'T', {
+      Object.defineProperty(this, 'T', Object.preventExtensions({
         enumerable: true,
         configurable: false,
         get: function () {
@@ -1024,7 +1024,7 @@
         set: function (value) {
           _T = value.toString();
         }
-      });
+      }));
 
       /**
       * (Optional) The partial field name (see 12.7.3.2, “Field Names”).
@@ -1033,7 +1033,7 @@
       * @default null
       * @type {string}
       */
-      Object.defineProperty(this, 'fieldName', {
+      Object.defineProperty(this, 'fieldName', Object.preventExtensions({
         configurable: true,
         enumerable: true,
         get: function () {
@@ -1042,7 +1042,7 @@
         set: function (value) {
           _T = value;
         }
-      });
+      }));
       
       var _fontKey = 'F1';
       var _fontName = 'helvetica';
@@ -1053,7 +1053,7 @@
       * @default 'helvetica'
       * @type {string}
       */
-      Object.defineProperty(this, 'fontName', {
+      Object.defineProperty(this, 'fontName', Object.preventExtensions({
         enumerable: true,
         configurable: true,
         get: function () {
@@ -1062,7 +1062,7 @@
         set: function (value) {
             _fontName = value;
         }
-      });
+      }));
 
       var _fontStyle = 'normal';
       /**
@@ -1072,7 +1072,7 @@
       * @default 'normal'
       * @type {string}
       */
-      Object.defineProperty(this, 'fontStyle', {
+      Object.defineProperty(this, 'fontStyle', Object.preventExtensions({
         enumerable: true,
         configurable: true,
         get: function () {
@@ -1081,7 +1081,7 @@
         set: function (value) {
             _fontStyle = value;
         }
-      });
+      }));
       
       var _fontSize = 0;
       /**
@@ -1091,7 +1091,7 @@
       * @default 0 (for auto)
       * @type {number}
       */
-      Object.defineProperty(this, 'fontSize', {
+      Object.defineProperty(this, 'fontSize', Object.preventExtensions({
         enumerable: true,
         configurable: true,
         get: function () {
@@ -1100,7 +1100,7 @@
         set: function (value) {
             _fontSize = scale(value);
         }
-      });
+      }));
       
       var _maxFontSize = 50;
       /**
@@ -1110,7 +1110,7 @@
       * @default 0 (for auto)
       * @type {number}
       */
-      Object.defineProperty(this, 'maxFontSize', {
+      Object.defineProperty(this, 'maxFontSize', Object.preventExtensions({
         enumerable: true,
         configurable: true,
         get: function () {
@@ -1119,7 +1119,7 @@
         set: function (value) {
             _maxFontSize = scale(value);
         }
-      });
+      }));
       
       var _color = 'black';
       /**
@@ -1129,7 +1129,7 @@
       * @default 'black'
       * @type {string|rgba}
       */
-      Object.defineProperty(this, 'color', {
+      Object.defineProperty(this, 'color', Object.preventExtensions({
         enumerable: true,
         configurable: true,
         get: function () {
@@ -1138,11 +1138,11 @@
         set: function (value) {
             _color = value;
         }
-      });
+      }));
 
       var _DA = '/F1 0 Tf 0 g';
       // Defines the default appearance (Needed for variable Text)
-      Object.defineProperty(this, 'DA', {
+      Object.defineProperty(this, 'DA', Object.preventExtensions({
         enumerable: true,
         configurable: false,
         get: function () {
@@ -1157,11 +1157,11 @@
           value = value.toString();
           _DA = value;
         }
-      });
+      }));
 
 
       var _DV = null;
-      Object.defineProperty(this, 'DV', {
+      Object.defineProperty(this, 'DV', Object.preventExtensions({
         enumerable: false,
         configurable: false,
         get: function () {
@@ -1185,7 +1185,7 @@
           _DV = value;
           }
         }
-      });
+      }));
       
       /**
       * (Optional; inheritable) The default value to which the field reverts when a reset-form action is executed (see 12.7.5.3, “Reset-Form Action”). The format of this value is the same as that of value. 
@@ -1194,7 +1194,7 @@
       * @default null
       * @type {any}
       */
-      Object.defineProperty(this, 'defaultValue', {
+      Object.defineProperty(this, 'defaultValue', Object.preventExtensions({
         enumerable: true,
         configurable: true,
         get: function () {
@@ -1212,10 +1212,10 @@
             _DV = value;
           }
         }
-      });
+      }));
 
       var _V = null;
-      Object.defineProperty(this, 'V', {
+      Object.defineProperty(this, 'V', Object.preventExtensions({
         enumerable: false,
         configurable: false,
         get: function () {
@@ -1239,7 +1239,7 @@
           _V = value;
           }
         }
-      });
+      }));
 
     /**
     * (Optional; inheritable) The field’s value, whose format varies depending on the field type. See the descriptions of individual field types for further information. 
@@ -1248,7 +1248,7 @@
     * @default null
     * @type {any}
     */
-      Object.defineProperty(this, 'value', {
+      Object.defineProperty(this, 'value', Object.preventExtensions({
         enumerable: true,
         configurable: true,
         get: function () {
@@ -1266,7 +1266,7 @@
             _V = value;
           }
         }
-      });
+      }));
       
       /**
       * Check if field has annotations
@@ -1275,29 +1275,29 @@
       * @readonly
       * @type {boolean}
       */
-      Object.defineProperty(this, 'hasAnnotation', {
+      Object.defineProperty(this, 'hasAnnotation', Object.preventExtensions({
         enumerable: true,
         configurable: true,
         get: function () {
           return (this.Rect);
         }
-      });
+      }));
       
-      Object.defineProperty(this, 'Type', {
+      Object.defineProperty(this, 'Type', Object.preventExtensions({
         enumerable: true,
         configurable: false,
         get: function () {
           return (this.hasAnnotation) ? "/Annot" : null;
         }
-      });
+      }));
 
-      Object.defineProperty(this, 'Subtype', {
+      Object.defineProperty(this, 'Subtype', Object.preventExtensions({
         enumerable: true,
         configurable: false,
         get: function () {
           return (this.hasAnnotation) ? "/Widget" : null;
         }
-      });
+      }));
       
       var _hasAppearanceStream = false;
       /**
@@ -1307,7 +1307,7 @@
       * @readonly
       * @type {boolean}
       */
-      Object.defineProperty(this, 'hasAppearanceStream', {
+      Object.defineProperty(this, 'hasAppearanceStream', Object.preventExtensions({
         enumerable: true,
         configurable: true,
         writeable: true,
@@ -1318,7 +1318,7 @@
             value = Boolean(value);
             _hasAppearanceStream = value;
         }
-      });
+      }));
 
       /**
       * The page on which the AcroFormField is placed
@@ -1327,7 +1327,7 @@
       * @type {number}
       */
       var _page;
-      Object.defineProperty(this, 'page', {
+      Object.defineProperty(this, 'page', Object.preventExtensions({
         enumerable: true,
         configurable: true,
         writeable: true,
@@ -1340,7 +1340,7 @@
         set: function (value) {
           _page = value;
         }
-      });
+      }));
       
       /**
       * If set, the user may not change the value of the field. Any associated widget annotations will not interact with the user; that is, they will not respond to mouse clicks or change their appearance in response to mouse motions. This flag is useful for fields whose values are computed or imported from a database. 
@@ -1349,7 +1349,7 @@
       * @default false
       * @type {boolean}
       */
-      Object.defineProperty(this, 'readOnly', {
+      Object.defineProperty(this, 'readOnly', Object.preventExtensions({
         enumerable: true,
         configurable: true,
         get: function () {
@@ -1362,7 +1362,7 @@
             this.Ff = clearBitForPdf(this.Ff, 1);
           }
         }
-      });
+      }));
       
       /**
       * If set, the field shall have a value at the time it is exported by a submitform action (see 12.7.5.2, “Submit-Form Action”). 
@@ -1371,7 +1371,7 @@
       * @default false
       * @type {boolean}
       */
-      Object.defineProperty(this, 'required', {
+      Object.defineProperty(this, 'required', Object.preventExtensions({
         enumerable: true,
         configurable: true,
         get: function () {
@@ -1384,7 +1384,7 @@
             this.Ff = clearBitForPdf(this.Ff, 2);
           }
         }
-      });
+      }));
       
       /**
       * If set, the field shall not be exported by a submit-form action (see 12.7.5.2, “Submit-Form Action”)
@@ -1393,7 +1393,7 @@
       * @default false
       * @type {boolean}
       */
-      Object.defineProperty(this, 'noExport', {
+      Object.defineProperty(this, 'noExport', Object.preventExtensions({
         enumerable: true,
         configurable: true,
         get: function () {
@@ -1406,11 +1406,11 @@
             this.Ff = clearBitForPdf(this.Ff, 3);
           }
         }
-      });
+      }));
 
 
       var _Q = null;
-      Object.defineProperty(this, 'Q', {
+      Object.defineProperty(this, 'Q', Object.preventExtensions({
         enumerable: true,
         configurable: false,
         get: function () {
@@ -1426,7 +1426,7 @@
             throw new Error('Invalid value "' + value + '" for attribute Q supplied.');
           }
         }
-      });
+      }));
       
       /**
       * (Optional; inheritable) A code specifying the form of quadding (justification) that shall be used in displaying the text:
@@ -1436,7 +1436,7 @@
       * @default 'left'
       * @type {string}
       */
-      Object.defineProperty(this, 'textAlign', {
+      Object.defineProperty(this, 'textAlign', Object.preventExtensions({
         get: function () {
           var result = 'left';
           switch (_Q) {
@@ -1471,7 +1471,7 @@
               _Q = 0;
           }
         }
-      });
+      }));
       
     };
 
@@ -1492,7 +1492,7 @@
       // Top Index
       var _TI = 0;
 
-      Object.defineProperty(this, 'TI', {
+      Object.defineProperty(this, 'TI', Object.preventExtensions({
         enumerable: true,
         configurable: false,
         get: function () {
@@ -1501,7 +1501,7 @@
         set: function (value) {
           _TI = value;
         }
-      });
+      }));
       
       /**
       * (Optional) For scrollable list boxes, the top index (the index in the Opt array of the first option visible in the list). Default value: 0.
@@ -1510,7 +1510,7 @@
       * @default 0
       * @type {number}
       */
-      Object.defineProperty(this, 'topIndex', {
+      Object.defineProperty(this, 'topIndex', Object.preventExtensions({
         enumerable: true,
         configurable: true,
         get: function () {
@@ -1519,10 +1519,10 @@
         set: function (value) {
           _TI = value;
         }
-      });
+      }));
 
       var _Opt = [];
-      Object.defineProperty(this, 'Opt', {
+      Object.defineProperty(this, 'Opt', Object.preventExtensions({
         enumerable: true,
         configurable: false,
         get: function () {
@@ -1531,7 +1531,7 @@
         set: function (value) {
           _Opt = pdfArrayToStringArray(value);
         }
-      });
+      }));
       
       
       /**
@@ -1603,7 +1603,7 @@
       * @default false
       * @type {boolean}
       */
-      Object.defineProperty(this, 'combo', {
+      Object.defineProperty(this, 'combo', Object.preventExtensions({
         enumerable: true,
         configurable: true,
         get: function () {
@@ -1616,7 +1616,7 @@
             this.Ff = clearBitForPdf(this.Ff, 18);
           }
         }
-      });
+      }));
       
       /**
       * If set, the combo box shall include an editable text box as well as a drop-down list; if clear, it shall include only a drop-down list. This flag shall be used only if the Combo flag is set. 
@@ -1625,7 +1625,7 @@
       * @default false
       * @type {boolean}
       */
-      Object.defineProperty(this, 'edit', {
+      Object.defineProperty(this, 'edit', Object.preventExtensions({
         enumerable: true,
         configurable: true,
         get: function () {
@@ -1641,7 +1641,7 @@
             }
           }
         }
-      });
+      }));
       
       /**
       * If set, the field’s option items shall be sorted alphabetically. This flag is intended for use by writers, not by readers. Conforming readers shall display the options in the order in which they occur in the Opt array (see Table 231). 
@@ -1650,7 +1650,7 @@
       * @default false
       * @type {boolean}
       */
-      Object.defineProperty(this, 'sort', {
+      Object.defineProperty(this, 'sort', Object.preventExtensions({
         enumerable: true,
         configurable: true,
         get: function () {
@@ -1664,7 +1664,7 @@
             this.Ff = clearBitForPdf(this.Ff, 20);
           }
         }
-      });
+      }));
       
       /**
       * (PDF 1.4) If set, more than one of the field’s option items may be selected simultaneously; if clear, at most one item shall be selected 
@@ -1673,7 +1673,7 @@
       * @default false
       * @type {boolean}
       */
-      Object.defineProperty(this, 'multiSelect', {
+      Object.defineProperty(this, 'multiSelect', Object.preventExtensions({
         enumerable: true,
         configurable: true,
         get: function () {
@@ -1687,7 +1687,7 @@
             this.Ff = clearBitForPdf(this.Ff, 22);
           }
         }
-      });
+      }));
       
       /**
       * (PDF 1.4) If set, text entered in the field shall not be spellchecked. This flag shall not be used unless the Combo and Edit flags are both set. 
@@ -1696,7 +1696,7 @@
       * @default false
       * @type {boolean}
       */
-      Object.defineProperty(this, 'doNotSpellCheck', {
+      Object.defineProperty(this, 'doNotSpellCheck', Object.preventExtensions({
         enumerable: true,
         configurable: true,
         get: function () {
@@ -1709,7 +1709,7 @@
             this.Ff = clearBitForPdf(this.Ff, 23);
           }
         }
-      });
+      }));
       
       /**
       * (PDF 1.5) If set, the new value shall be committed as soon as a selection is made (commonly with the pointing device). In this case, supplying a value for a field involves three actions: selecting the field for fill-in, selecting a choice for the fill-in value, and leaving that field, which finalizes or “commits” the data choice and triggers any actions associated with the entry or changing of this data. If this flag is on, then processing does not wait for leaving the field action to occur, but immediately proceeds to the third step.
@@ -1719,7 +1719,7 @@
       * @default false
       * @type {boolean}
       */
-      Object.defineProperty(this, 'commitOnSelChange', {
+      Object.defineProperty(this, 'commitOnSelChange', Object.preventExtensions({
         enumerable: true,
         configurable: true,
         get: function () {
@@ -1732,8 +1732,7 @@
             this.Ff = clearBitForPdf(this.Ff, 27);
           }
         }
-      });
-      
+      }));
       
       this.hasAppearanceStream = false;
     };
@@ -1792,7 +1791,7 @@
       * @name AcroFormButton#noToggleToOff
       * @type {boolean}
       */
-      Object.defineProperty(this, 'noToggleToOff', {
+      Object.defineProperty(this, 'noToggleToOff', Object.preventExtensions({
         enumerable: true,
         configurable: true,
         get: function () {
@@ -1805,7 +1804,7 @@
             this.Ff = clearBitForPdf(this.Ff, 15);
           }
         }
-      });
+      }));
       
       /**
       * If set, the field is a set of radio buttons; if clear, the field is a checkbox. This flag may be set only if the Pushbutton flag is clear. 
@@ -1813,7 +1812,7 @@
       * @name AcroFormButton#radio
       * @type {boolean}
       */
-      Object.defineProperty(this, 'radio', {
+      Object.defineProperty(this, 'radio', Object.preventExtensions({
         enumerable: true,
         configurable: true,
         get: function () {
@@ -1826,7 +1825,7 @@
             this.Ff = clearBitForPdf(this.Ff, 16);
           }
         }
-      });
+      }));
       
       /**
       * If set, the field is a pushbutton that does not retain a permanent value. 
@@ -1834,7 +1833,7 @@
       * @name AcroFormButton#pushButton
       * @type {boolean}
       */
-      Object.defineProperty(this, 'pushButton', {
+      Object.defineProperty(this, 'pushButton', Object.preventExtensions({
         enumerable: true,
         configurable: true,
         get: function () {
@@ -1847,7 +1846,7 @@
             this.Ff = clearBitForPdf(this.Ff, 17);
           }
         }
-      });
+      }));
       
       /**
       * (PDF 1.5) If set, a group of radio buttons within a radio button field that use the same value for the on state will turn on and off in unison; that is if one is checked, they are all checked. If clear, the buttons are mutually exclusive (the same behavior as HTML radio buttons).
@@ -1855,7 +1854,7 @@
       * @name AcroFormButton#radioIsUnison
       * @type {boolean}
       */
-      Object.defineProperty(this, 'radioIsUnison', {
+      Object.defineProperty(this, 'radioIsUnison', Object.preventExtensions({
         enumerable: true,
         configurable: true,
         get: function () {
@@ -1868,10 +1867,10 @@
             this.Ff = clearBitForPdf(this.Ff, 26);
           }
         }
-      });
+      }));
       
       var _MK = {};
-      Object.defineProperty(this, 'MK', {
+      Object.defineProperty(this, 'MK', Object.preventExtensions({
         enumerable: false,
         configurable: false,
         get: function () {
@@ -1892,7 +1891,7 @@
                 _MK = value
             }
         }
-      });
+      }));
       
       /**
       * From the PDF reference:
@@ -1905,7 +1904,7 @@
       * @name AcroFormButton#caption
       * @type {string}
       */
-      Object.defineProperty(this, 'caption', {
+      Object.defineProperty(this, 'caption', Object.preventExtensions({
         enumerable: true,
         configurable: true,
         get: function () {
@@ -1916,10 +1915,10 @@
               _MK.CA = value;
           }
         }
-      });
+      }));
       
       var _AS;
-      Object.defineProperty(this, 'AS', {
+      Object.defineProperty(this, 'AS', Object.preventExtensions({
         enumerable: false,
         configurable: false,
         get: function () {
@@ -1928,7 +1927,7 @@
         set: function (value) {
           _AS = value;
         }
-      });
+      }));
       
       
       /**
@@ -1937,7 +1936,7 @@
       * @name AcroFormButton#appearanceState
       * @type {any}
       */
-      Object.defineProperty(this, 'appearanceState', {
+      Object.defineProperty(this, 'appearanceState', Object.preventExtensions({
         enumerable: true,
         configurable: true,
         get: function () {
@@ -1946,7 +1945,7 @@
         set: function (value) {
           _AS = '/' + value;
         }
-      });
+      }));
 
     };
     inherit(AcroFormButton, AcroFormField);
@@ -1973,7 +1972,7 @@
       this.pushButton = false;
       
       var _Kids = [];
-      Object.defineProperty(this, 'Kids', {
+      Object.defineProperty(this, 'Kids', Object.preventExtensions({
         enumerable: true,
         configurable: false,
         get: function () {
@@ -1986,7 +1985,7 @@
             _Kids = [];
           }
         }
-      });
+      }));
     };
     inherit(AcroFormRadioButton, AcroFormButton);
     
@@ -2001,7 +2000,7 @@
       AcroFormField.call(this);
       
       var _parent;
-      Object.defineProperty(this, 'Parent', {
+      Object.defineProperty(this, 'Parent', Object.preventExtensions({
         enumerable: false,
         configurable: false,
         get: function () {
@@ -2010,10 +2009,10 @@
         set: function (value) {
           _parent = value;
         }
-      });
+      }));
       
       var _optionName;
-      Object.defineProperty(this, 'optionName', {
+      Object.defineProperty(this, 'optionName', Object.preventExtensions({
         enumerable: false,
         configurable: true,
         get: function () {
@@ -2022,10 +2021,10 @@
         set: function (value) {
           _optionName = value;
         }
-      });
+      }));
 
       var _MK = {};
-      Object.defineProperty(this, 'MK', {
+      Object.defineProperty(this, 'MK', Object.preventExtensions({
         enumerable: false,
         configurable: false,
         get: function () {
@@ -2043,7 +2042,7 @@
                 _MK = value
             }
         }
-      });
+      }));
       
       /**
       * From the PDF reference:
@@ -2056,7 +2055,7 @@
       * @name AcroFormButton#caption
       * @type {string}
       */
-      Object.defineProperty(this, 'caption', {
+      Object.defineProperty(this, 'caption', Object.preventExtensions({
         enumerable: true,
         configurable: true,
         get: function () {
@@ -2067,10 +2066,10 @@
               _MK.CA = value;
           }
         }
-      });
+      }));
       
       var _AS;
-      Object.defineProperty(this, 'AS', {
+      Object.defineProperty(this, 'AS', Object.preventExtensions({
         enumerable: false,
         configurable: false,
         get: function () {
@@ -2079,7 +2078,7 @@
         set: function (value) {
           _AS = value;
         }
-      });
+      }));
       
       /**
       * (Required if the appearance dictionary AP contains one or more subdictionaries; PDF 1.2) The annotation's appearance state, which selects the applicable appearance stream from an appearance subdictionary (see Section 12.5.5, "Appearance Streams")
@@ -2087,7 +2086,7 @@
       * @name AcroFormButton#appearanceState
       * @type {any}
       */
-      Object.defineProperty(this, 'appearanceState', {
+      Object.defineProperty(this, 'appearanceState', Object.preventExtensions({
         enumerable: true,
         configurable: true,
         get: function () {
@@ -2096,7 +2095,7 @@
         set: function (value) {
           _AS = '/' + value;
         }
-      });
+      }));
       this.optionName = name;
       this.caption = 'l';
       this.appearanceState = 'Off'; 
@@ -2169,7 +2168,7 @@
       * @name AcroFormTextField#multiline
       * @type {boolean}
       */
-      Object.defineProperty(this, 'multiline', {
+      Object.defineProperty(this, 'multiline', Object.preventExtensions({
         enumerable: true,
         configurable: true,
         get: function () {
@@ -2182,7 +2181,7 @@
             this.Ff = clearBitForPdf(this.Ff, 13);
           }
         }
-      });
+      }));
 
       /**
       * (PDF 1.4) If set, the text entered in the field represents the pathname of a file whose contents shall be submitted as the value of the field. 
@@ -2190,7 +2189,7 @@
       * @name AcroFormTextField#fileSelect
       * @type {boolean}
       */
-      Object.defineProperty(this, 'fileSelect', {
+      Object.defineProperty(this, 'fileSelect', Object.preventExtensions({
         enumerable: true,
         configurable: true,
         get: function () {
@@ -2203,7 +2202,7 @@
             this.Ff = clearBitForPdf(this.Ff, 21);
           }
         }
-      });
+      }));
       
       /**
       * (PDF 1.4) If set, text entered in the field shall not be spell-checked. 
@@ -2211,7 +2210,7 @@
       * @name AcroFormTextField#doNotSpellCheck
       * @type {boolean}
       */
-      Object.defineProperty(this, 'doNotSpellCheck', {
+      Object.defineProperty(this, 'doNotSpellCheck', Object.preventExtensions({
         enumerable: true,
         configurable: true,
         get: function () {
@@ -2224,7 +2223,7 @@
             this.Ff = clearBitForPdf(this.Ff, 23);
           }
         }
-      });
+      }));
       
       /**
       * (PDF 1.4) If set, the field shall not scroll (horizontally for single-line fields, vertically for multiple-line fields) to accommodate more text than fits within its annotation rectangle. Once the field is full, no further text shall be accepted for interactive form filling; for noninteractive form filling, the filler should take care not to add more character than will visibly fit in the defined area. 
@@ -2232,7 +2231,7 @@
       * @name AcroFormTextField#doNotScroll
       * @type {boolean}
       */
-      Object.defineProperty(this, 'doNotScroll', {
+      Object.defineProperty(this, 'doNotScroll', Object.preventExtensions({
         enumerable: true,
         configurable: true,
         get: function () {
@@ -2245,7 +2244,7 @@
             this.Ff = clearBitForPdf(this.Ff, 24);
           }
         }
-      });
+      }));
       
       /**
       * (PDF 1.5) May be set only if the MaxLen entry is present in the text field dictionary (see Table 229) and if the Multiline, Password, and FileSelect flags are clear. If set, the field shall be automatically divided into as many equally spaced positions, or combs, as the value of MaxLen, and the text is laid out into those combs.
@@ -2253,7 +2252,7 @@
       * @name AcroFormTextField#comb
       * @type {boolean}
       */
-      Object.defineProperty(this, 'comb', {
+      Object.defineProperty(this, 'comb', Object.preventExtensions({
         enumerable: true,
         configurable: true,
         get: function () {
@@ -2266,7 +2265,7 @@
             this.Ff = clearBitForPdf(this.Ff, 25);
           }
         }
-      });
+      }));
 
       /**
       * (PDF 1.5) If set, the value of this field shall be a rich text string (see 12.7.3.4, “Rich Text Strings”). If the field has a value, the RV entry of the field dictionary (Table 222) shall specify the rich text string.
@@ -2274,7 +2273,7 @@
       * @name AcroFormTextField#richText
       * @type {boolean}
       */
-      Object.defineProperty(this, 'richText', {
+      Object.defineProperty(this, 'richText', Object.preventExtensions({
         enumerable: true,
         configurable: true,
         get: function () {
@@ -2287,10 +2286,10 @@
             this.Ff = clearBitForPdf(this.Ff, 26);
           }
         }
-      });
+      }));
 
       var _MaxLen = null;
-      Object.defineProperty(this, 'MaxLen', {
+      Object.defineProperty(this, 'MaxLen', Object.preventExtensions({
         enumerable: true,
         configurable: false,
         get: function () {
@@ -2299,7 +2298,7 @@
         set: function (value) {
           _MaxLen = value;
         }
-      });
+      }));
       
       /**
       * (Optional; inheritable) The maximum length of the field’s text, in characters. 
@@ -2307,7 +2306,7 @@
       * @name AcroFormTextField#maxLength
       * @type {number}
       */
-      Object.defineProperty(this, 'maxLength', {
+      Object.defineProperty(this, 'maxLength', Object.preventExtensions({
         enumerable: true,
         configurable: true,
         get: function () {
@@ -2318,16 +2317,16 @@
           _MaxLen = value;
           }
         }
-      });
+      }));
       
 
-      Object.defineProperty(this, 'hasAppearanceStream', {
+      Object.defineProperty(this, 'hasAppearanceStream', Object.preventExtensions({
         enumerable: true,
         configurable: true,
         get: function () {
           return (this.V || this.DV);
         }
-      });
+      }));
 
     };
     inherit(AcroFormTextField, AcroFormField);
@@ -2347,7 +2346,7 @@
       * @name AcroFormTextField#password
       * @type {boolean}
       */
-      Object.defineProperty(this, 'password', {
+      Object.defineProperty(this, 'password', Object.preventExtensions({
         enumerable: true,
         configurable: true,
         get: function () {
@@ -2360,7 +2359,7 @@
             this.Ff = clearBitForPdf(this.Ff, 14);
           }
         }
-      });
+      }));
       this.password = true;
     };
     inherit(AcroFormPasswordField, AcroFormTextField);
