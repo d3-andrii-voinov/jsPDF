@@ -5,8 +5,8 @@
 
   /** @license
    * jsPDF - PDF Document creation from JavaScript
-   * Version 1.5.3 Built on 2019-04-17T20:23:47.617Z
-   *                      CommitID d99b5291c4
+   * Version 1.5.3 Built on 2019-04-17T20:36:47.223Z
+   *                      CommitID e5fb64bcfe
    *
    * Copyright (c) 2010-2016 James Hall <james@parall.ax>, https://github.com/MrRio/jsPDF
    *               2010 Aaron Spike, https://github.com/acspike
@@ -4536,7 +4536,7 @@
       */
 
 
-      Object.defineProperty(this, 'objId', Object.preventExtensions({
+      Object.defineProperty(this, 'objId', Object.freeze({
         configurable: true,
         get: function get() {
           if (!_objId) {
@@ -4622,23 +4622,23 @@
 
     var AcroFormXObject = function AcroFormXObject() {
       AcroFormPDFObject.call(this);
-      Object.defineProperty(this, 'Type', Object.preventExtensions({
+      Object.defineProperty(this, 'Type', Object.freeze({
         value: "/XObject",
         configurable: false,
         writeable: true
       }));
-      Object.defineProperty(this, 'Subtype', Object.preventExtensions({
+      Object.defineProperty(this, 'Subtype', Object.freeze({
         value: "/Form",
         configurable: false,
         writeable: true
       }));
-      Object.defineProperty(this, 'FormType', Object.preventExtensions({
+      Object.defineProperty(this, 'FormType', Object.freeze({
         value: 1,
         configurable: false,
         writeable: true
       }));
       var _BBox = [];
-      Object.defineProperty(this, 'BBox', Object.preventExtensions({
+      Object.defineProperty(this, 'BBox', Object.freeze({
         configurable: false,
         writeable: true,
         get: function get() {
@@ -4648,7 +4648,7 @@
           _BBox = value;
         }
       }));
-      Object.defineProperty(this, 'Resources', Object.preventExtensions({
+      Object.defineProperty(this, 'Resources', Object.freeze({
         value: "2 0 R",
         configurable: false,
         writeable: true
@@ -4656,7 +4656,7 @@
 
       var _stream;
 
-      Object.defineProperty(this, 'stream', Object.preventExtensions({
+      Object.defineProperty(this, 'stream', Object.freeze({
         enumerable: false,
         configurable: true,
         set: function set(value) {
@@ -4677,7 +4677,7 @@
     var AcroFormDictionary = function AcroFormDictionary() {
       AcroFormPDFObject.call(this);
       var _Kids = [];
-      Object.defineProperty(this, 'Kids', Object.preventExtensions({
+      Object.defineProperty(this, 'Kids', Object.freeze({
         enumerable: false,
         configurable: true,
         get: function get() {
@@ -4688,7 +4688,7 @@
           }
         }
       }));
-      Object.defineProperty(this, 'Fields', Object.preventExtensions({
+      Object.defineProperty(this, 'Fields', Object.freeze({
         enumerable: false,
         configurable: false,
         get: function get() {
@@ -4698,7 +4698,7 @@
 
       var _DA;
 
-      Object.defineProperty(this, 'DA', Object.preventExtensions({
+      Object.defineProperty(this, 'DA', Object.freeze({
         enumerable: false,
         configurable: false,
         get: function get() {
@@ -4726,7 +4726,7 @@
       AcroFormPDFObject.call(this); //Annotation-Flag See Table 165
 
       var _F = 4;
-      Object.defineProperty(this, 'F', Object.preventExtensions({
+      Object.defineProperty(this, 'F', Object.freeze({
         enumerable: false,
         configurable: false,
         get: function get() {
@@ -4749,7 +4749,7 @@
       * @type {boolean}
       */
 
-      Object.defineProperty(this, 'showWhenPrinted', Object.preventExtensions({
+      Object.defineProperty(this, 'showWhenPrinted', Object.freeze({
         enumerable: true,
         configurable: true,
         get: function get() {
@@ -4764,7 +4764,7 @@
         }
       }));
       var _Ff = 0;
-      Object.defineProperty(this, 'Ff', Object.preventExtensions({
+      Object.defineProperty(this, 'Ff', Object.freeze({
         enumerable: false,
         configurable: false,
         get: function get() {
@@ -4779,7 +4779,7 @@
         }
       }));
       var _Rect = [];
-      Object.defineProperty(this, 'Rect', Object.preventExtensions({
+      Object.defineProperty(this, 'Rect', Object.freeze({
         enumerable: false,
         configurable: false,
         get: function get() {
@@ -4805,7 +4805,7 @@
       * @type {number}
       */
 
-      Object.defineProperty(this, 'x', Object.preventExtensions({
+      Object.defineProperty(this, 'x', Object.freeze({
         enumerable: true,
         configurable: true,
         get: function get() {
@@ -4827,7 +4827,7 @@
       * @type {number}
       */
 
-      Object.defineProperty(this, 'y', Object.preventExtensions({
+      Object.defineProperty(this, 'y', Object.freeze({
         enumerable: true,
         configurable: true,
         get: function get() {
@@ -4849,7 +4849,7 @@
       * @type {number}
       */
 
-      Object.defineProperty(this, 'width', Object.preventExtensions({
+      Object.defineProperty(this, 'width', Object.freeze({
         enumerable: true,
         configurable: true,
         get: function get() {
@@ -4871,7 +4871,7 @@
       * @type {number}
       */
 
-      Object.defineProperty(this, 'height', Object.preventExtensions({
+      Object.defineProperty(this, 'height', Object.freeze({
         enumerable: true,
         configurable: true,
         get: function get() {
@@ -4886,7 +4886,7 @@
         }
       }));
       var _FT = "";
-      Object.defineProperty(this, 'FT', Object.preventExtensions({
+      Object.defineProperty(this, 'FT', Object.freeze({
         enumerable: true,
         configurable: false,
         get: function get() {
@@ -4907,7 +4907,7 @@
         }
       }));
       var _T = null;
-      Object.defineProperty(this, 'T', Object.preventExtensions({
+      Object.defineProperty(this, 'T', Object.freeze({
         enumerable: true,
         configurable: false,
         get: function get() {
@@ -4934,7 +4934,7 @@
       * @type {string}
       */
 
-      Object.defineProperty(this, 'fieldName', Object.preventExtensions({
+      Object.defineProperty(this, 'fieldName', Object.freeze({
         configurable: true,
         enumerable: true,
         get: function get() {
@@ -4953,7 +4953,7 @@
       * @type {string}
       */
 
-      Object.defineProperty(this, 'fontName', Object.preventExtensions({
+      Object.defineProperty(this, 'fontName', Object.freeze({
         enumerable: true,
         configurable: true,
         get: function get() {
@@ -4972,7 +4972,7 @@
       * @type {string}
       */
 
-      Object.defineProperty(this, 'fontStyle', Object.preventExtensions({
+      Object.defineProperty(this, 'fontStyle', Object.freeze({
         enumerable: true,
         configurable: true,
         get: function get() {
@@ -4991,7 +4991,7 @@
       * @type {number}
       */
 
-      Object.defineProperty(this, 'fontSize', Object.preventExtensions({
+      Object.defineProperty(this, 'fontSize', Object.freeze({
         enumerable: true,
         configurable: true,
         get: function get() {
@@ -5010,7 +5010,7 @@
       * @type {number}
       */
 
-      Object.defineProperty(this, 'maxFontSize', Object.preventExtensions({
+      Object.defineProperty(this, 'maxFontSize', Object.freeze({
         enumerable: true,
         configurable: true,
         get: function get() {
@@ -5029,7 +5029,7 @@
       * @type {string|rgba}
       */
 
-      Object.defineProperty(this, 'color', Object.preventExtensions({
+      Object.defineProperty(this, 'color', Object.freeze({
         enumerable: true,
         configurable: true,
         get: function get() {
@@ -5041,7 +5041,7 @@
       }));
       var _DA = '/F1 0 Tf 0 g'; // Defines the default appearance (Needed for variable Text)
 
-      Object.defineProperty(this, 'DA', Object.preventExtensions({
+      Object.defineProperty(this, 'DA', Object.freeze({
         enumerable: true,
         configurable: false,
         get: function get() {
@@ -5057,7 +5057,7 @@
         }
       }));
       var _DV = null;
-      Object.defineProperty(this, 'DV', Object.preventExtensions({
+      Object.defineProperty(this, 'DV', Object.freeze({
         enumerable: false,
         configurable: false,
         get: function get() {
@@ -5093,7 +5093,7 @@
       * @type {any}
       */
 
-      Object.defineProperty(this, 'defaultValue', Object.preventExtensions({
+      Object.defineProperty(this, 'defaultValue', Object.freeze({
         enumerable: true,
         configurable: true,
         get: function get() {
@@ -5114,7 +5114,7 @@
         }
       }));
       var _V = null;
-      Object.defineProperty(this, 'V', Object.preventExtensions({
+      Object.defineProperty(this, 'V', Object.freeze({
         enumerable: false,
         configurable: false,
         get: function get() {
@@ -5150,7 +5150,7 @@
       * @type {any}
       */
 
-      Object.defineProperty(this, 'value', Object.preventExtensions({
+      Object.defineProperty(this, 'value', Object.freeze({
         enumerable: true,
         configurable: true,
         get: function get() {
@@ -5178,21 +5178,21 @@
       * @type {boolean}
       */
 
-      Object.defineProperty(this, 'hasAnnotation', Object.preventExtensions({
+      Object.defineProperty(this, 'hasAnnotation', Object.freeze({
         enumerable: true,
         configurable: true,
         get: function get() {
           return this.Rect;
         }
       }));
-      Object.defineProperty(this, 'Type', Object.preventExtensions({
+      Object.defineProperty(this, 'Type', Object.freeze({
         enumerable: true,
         configurable: false,
         get: function get() {
           return this.hasAnnotation ? "/Annot" : null;
         }
       }));
-      Object.defineProperty(this, 'Subtype', Object.preventExtensions({
+      Object.defineProperty(this, 'Subtype', Object.freeze({
         enumerable: true,
         configurable: false,
         get: function get() {
@@ -5208,7 +5208,7 @@
       * @type {boolean}
       */
 
-      Object.defineProperty(this, 'hasAppearanceStream', Object.preventExtensions({
+      Object.defineProperty(this, 'hasAppearanceStream', Object.freeze({
         enumerable: true,
         configurable: true,
         writeable: true,
@@ -5229,7 +5229,7 @@
 
       var _page;
 
-      Object.defineProperty(this, 'page', Object.preventExtensions({
+      Object.defineProperty(this, 'page', Object.freeze({
         enumerable: true,
         configurable: true,
         writeable: true,
@@ -5252,7 +5252,7 @@
       * @type {boolean}
       */
 
-      Object.defineProperty(this, 'readOnly', Object.preventExtensions({
+      Object.defineProperty(this, 'readOnly', Object.freeze({
         enumerable: true,
         configurable: true,
         get: function get() {
@@ -5274,7 +5274,7 @@
       * @type {boolean}
       */
 
-      Object.defineProperty(this, 'required', Object.preventExtensions({
+      Object.defineProperty(this, 'required', Object.freeze({
         enumerable: true,
         configurable: true,
         get: function get() {
@@ -5296,7 +5296,7 @@
       * @type {boolean}
       */
 
-      Object.defineProperty(this, 'noExport', Object.preventExtensions({
+      Object.defineProperty(this, 'noExport', Object.freeze({
         enumerable: true,
         configurable: true,
         get: function get() {
@@ -5311,7 +5311,7 @@
         }
       }));
       var _Q = null;
-      Object.defineProperty(this, 'Q', Object.preventExtensions({
+      Object.defineProperty(this, 'Q', Object.freeze({
         enumerable: true,
         configurable: false,
         get: function get() {
@@ -5338,7 +5338,7 @@
       * @type {string}
       */
 
-      Object.defineProperty(this, 'textAlign', Object.preventExtensions({
+      Object.defineProperty(this, 'textAlign', Object.freeze({
         get: function get() {
           var result = 'left';
 
@@ -5397,7 +5397,7 @@
       this.fontName = 'zapfdingbats'; // Top Index
 
       var _TI = 0;
-      Object.defineProperty(this, 'TI', Object.preventExtensions({
+      Object.defineProperty(this, 'TI', Object.freeze({
         enumerable: true,
         configurable: false,
         get: function get() {
@@ -5415,7 +5415,7 @@
       * @type {number}
       */
 
-      Object.defineProperty(this, 'topIndex', Object.preventExtensions({
+      Object.defineProperty(this, 'topIndex', Object.freeze({
         enumerable: true,
         configurable: true,
         get: function get() {
@@ -5426,7 +5426,7 @@
         }
       }));
       var _Opt = [];
-      Object.defineProperty(this, 'Opt', Object.preventExtensions({
+      Object.defineProperty(this, 'Opt', Object.freeze({
         enumerable: true,
         configurable: false,
         get: function get() {
@@ -5514,7 +5514,7 @@
       */
 
 
-      Object.defineProperty(this, 'combo', Object.preventExtensions({
+      Object.defineProperty(this, 'combo', Object.freeze({
         enumerable: true,
         configurable: true,
         get: function get() {
@@ -5536,7 +5536,7 @@
       * @type {boolean}
       */
 
-      Object.defineProperty(this, 'edit', Object.preventExtensions({
+      Object.defineProperty(this, 'edit', Object.freeze({
         enumerable: true,
         configurable: true,
         get: function get() {
@@ -5561,7 +5561,7 @@
       * @type {boolean}
       */
 
-      Object.defineProperty(this, 'sort', Object.preventExtensions({
+      Object.defineProperty(this, 'sort', Object.freeze({
         enumerable: true,
         configurable: true,
         get: function get() {
@@ -5585,7 +5585,7 @@
       * @type {boolean}
       */
 
-      Object.defineProperty(this, 'multiSelect', Object.preventExtensions({
+      Object.defineProperty(this, 'multiSelect', Object.freeze({
         enumerable: true,
         configurable: true,
         get: function get() {
@@ -5607,7 +5607,7 @@
       * @type {boolean}
       */
 
-      Object.defineProperty(this, 'doNotSpellCheck', Object.preventExtensions({
+      Object.defineProperty(this, 'doNotSpellCheck', Object.freeze({
         enumerable: true,
         configurable: true,
         get: function get() {
@@ -5630,7 +5630,7 @@
       * @type {boolean}
       */
 
-      Object.defineProperty(this, 'commitOnSelChange', Object.preventExtensions({
+      Object.defineProperty(this, 'commitOnSelChange', Object.freeze({
         enumerable: true,
         configurable: true,
         get: function get() {
@@ -5704,7 +5704,7 @@
       * @type {boolean}
       */
 
-      Object.defineProperty(this, 'noToggleToOff', Object.preventExtensions({
+      Object.defineProperty(this, 'noToggleToOff', Object.freeze({
         enumerable: true,
         configurable: true,
         get: function get() {
@@ -5725,7 +5725,7 @@
       * @type {boolean}
       */
 
-      Object.defineProperty(this, 'radio', Object.preventExtensions({
+      Object.defineProperty(this, 'radio', Object.freeze({
         enumerable: true,
         configurable: true,
         get: function get() {
@@ -5746,7 +5746,7 @@
       * @type {boolean}
       */
 
-      Object.defineProperty(this, 'pushButton', Object.preventExtensions({
+      Object.defineProperty(this, 'pushButton', Object.freeze({
         enumerable: true,
         configurable: true,
         get: function get() {
@@ -5767,7 +5767,7 @@
       * @type {boolean}
       */
 
-      Object.defineProperty(this, 'radioIsUnison', Object.preventExtensions({
+      Object.defineProperty(this, 'radioIsUnison', Object.freeze({
         enumerable: true,
         configurable: true,
         get: function get() {
@@ -5782,7 +5782,7 @@
         }
       }));
       var _MK = {};
-      Object.defineProperty(this, 'MK', Object.preventExtensions({
+      Object.defineProperty(this, 'MK', Object.freeze({
         enumerable: false,
         configurable: false,
         get: function get() {
@@ -5819,7 +5819,7 @@
       * @type {string}
       */
 
-      Object.defineProperty(this, 'caption', Object.preventExtensions({
+      Object.defineProperty(this, 'caption', Object.freeze({
         enumerable: true,
         configurable: true,
         get: function get() {
@@ -5834,7 +5834,7 @@
 
       var _AS;
 
-      Object.defineProperty(this, 'AS', Object.preventExtensions({
+      Object.defineProperty(this, 'AS', Object.freeze({
         enumerable: false,
         configurable: false,
         get: function get() {
@@ -5851,7 +5851,7 @@
       * @type {any}
       */
 
-      Object.defineProperty(this, 'appearanceState', Object.preventExtensions({
+      Object.defineProperty(this, 'appearanceState', Object.freeze({
         enumerable: true,
         configurable: true,
         get: function get() {
@@ -5887,7 +5887,7 @@
       this.radio = true;
       this.pushButton = false;
       var _Kids = [];
-      Object.defineProperty(this, 'Kids', Object.preventExtensions({
+      Object.defineProperty(this, 'Kids', Object.freeze({
         enumerable: true,
         configurable: false,
         get: function get() {
@@ -5917,7 +5917,7 @@
 
       var _parent;
 
-      Object.defineProperty(this, 'Parent', Object.preventExtensions({
+      Object.defineProperty(this, 'Parent', Object.freeze({
         enumerable: false,
         configurable: false,
         get: function get() {
@@ -5930,7 +5930,7 @@
 
       var _optionName;
 
-      Object.defineProperty(this, 'optionName', Object.preventExtensions({
+      Object.defineProperty(this, 'optionName', Object.freeze({
         enumerable: false,
         configurable: true,
         get: function get() {
@@ -5941,7 +5941,7 @@
         }
       }));
       var _MK = {};
-      Object.defineProperty(this, 'MK', Object.preventExtensions({
+      Object.defineProperty(this, 'MK', Object.freeze({
         enumerable: false,
         configurable: false,
         get: function get() {
@@ -5974,7 +5974,7 @@
       * @type {string}
       */
 
-      Object.defineProperty(this, 'caption', Object.preventExtensions({
+      Object.defineProperty(this, 'caption', Object.freeze({
         enumerable: true,
         configurable: true,
         get: function get() {
@@ -5989,7 +5989,7 @@
 
       var _AS;
 
-      Object.defineProperty(this, 'AS', Object.preventExtensions({
+      Object.defineProperty(this, 'AS', Object.freeze({
         enumerable: false,
         configurable: false,
         get: function get() {
@@ -6006,7 +6006,7 @@
       * @type {any}
       */
 
-      Object.defineProperty(this, 'appearanceState', Object.preventExtensions({
+      Object.defineProperty(this, 'appearanceState', Object.freeze({
         enumerable: true,
         configurable: true,
         get: function get() {
@@ -6087,7 +6087,7 @@
       * @type {boolean}
       */
 
-      Object.defineProperty(this, 'multiline', Object.preventExtensions({
+      Object.defineProperty(this, 'multiline', Object.freeze({
         enumerable: true,
         configurable: true,
         get: function get() {
@@ -6108,7 +6108,7 @@
       * @type {boolean}
       */
 
-      Object.defineProperty(this, 'fileSelect', Object.preventExtensions({
+      Object.defineProperty(this, 'fileSelect', Object.freeze({
         enumerable: true,
         configurable: true,
         get: function get() {
@@ -6129,7 +6129,7 @@
       * @type {boolean}
       */
 
-      Object.defineProperty(this, 'doNotSpellCheck', Object.preventExtensions({
+      Object.defineProperty(this, 'doNotSpellCheck', Object.freeze({
         enumerable: true,
         configurable: true,
         get: function get() {
@@ -6150,7 +6150,7 @@
       * @type {boolean}
       */
 
-      Object.defineProperty(this, 'doNotScroll', Object.preventExtensions({
+      Object.defineProperty(this, 'doNotScroll', Object.freeze({
         enumerable: true,
         configurable: true,
         get: function get() {
@@ -6171,7 +6171,7 @@
       * @type {boolean}
       */
 
-      Object.defineProperty(this, 'comb', Object.preventExtensions({
+      Object.defineProperty(this, 'comb', Object.freeze({
         enumerable: true,
         configurable: true,
         get: function get() {
@@ -6192,7 +6192,7 @@
       * @type {boolean}
       */
 
-      Object.defineProperty(this, 'richText', Object.preventExtensions({
+      Object.defineProperty(this, 'richText', Object.freeze({
         enumerable: true,
         configurable: true,
         get: function get() {
@@ -6207,7 +6207,7 @@
         }
       }));
       var _MaxLen = null;
-      Object.defineProperty(this, 'MaxLen', Object.preventExtensions({
+      Object.defineProperty(this, 'MaxLen', Object.freeze({
         enumerable: true,
         configurable: false,
         get: function get() {
@@ -6224,7 +6224,7 @@
       * @type {number}
       */
 
-      Object.defineProperty(this, 'maxLength', Object.preventExtensions({
+      Object.defineProperty(this, 'maxLength', Object.freeze({
         enumerable: true,
         configurable: true,
         get: function get() {
@@ -6236,7 +6236,7 @@
           }
         }
       }));
-      Object.defineProperty(this, 'hasAppearanceStream', Object.preventExtensions({
+      Object.defineProperty(this, 'hasAppearanceStream', Object.freeze({
         enumerable: true,
         configurable: true,
         get: function get() {
@@ -6262,7 +6262,7 @@
       * @type {boolean}
       */
 
-      Object.defineProperty(this, 'password', Object.preventExtensions({
+      Object.defineProperty(this, 'password', Object.freeze({
         enumerable: true,
         configurable: true,
         get: function get() {
