@@ -648,7 +648,7 @@
     * @name AcroFormPDFObject#objId
     * @type {any}
     */
-      Object.defineProperty(this, 'objId', {
+      Object.defineProperty(this, 'objId', Object.preventExtensions({
         configurable: true,
         get: function () {
           if (!_objId) {
@@ -662,7 +662,7 @@
         set: function (value) {
             _objId = value;
         }
-      });
+      }));
     };
 
     /**
@@ -719,26 +719,26 @@
       AcroFormPDFObject.call(this);
       
       
-      Object.defineProperty(this, 'Type', {
+      Object.defineProperty(this, 'Type', Object.preventExtensions({
         value : "/XObject",
         configurable: false,
         writeable: true
-      });
+      }));
       
-      Object.defineProperty(this, 'Subtype', {
+      Object.defineProperty(this, 'Subtype', Object.preventExtensions({
         value : "/Form",
         configurable: false,
         writeable: true
-      });
+      }));
 
-      Object.defineProperty(this, 'FormType', {
+      Object.defineProperty(this, 'FormType', Object.preventExtensions({
         value : 1,
         configurable: false,
         writeable: true
-      });
+      }));
       
       var _BBox = [];
-      Object.defineProperty(this, 'BBox', {
+      Object.defineProperty(this, 'BBox', Object.preventExtensions({
         configurable: false,
         writeable: true,
         get: function () {
@@ -747,16 +747,16 @@
         set: function (value) {
             _BBox = value;
         }
-      });
+      }));
       
-      Object.defineProperty(this, 'Resources', {
+      Object.defineProperty(this, 'Resources', Object.preventExtensions({
         value : "2 0 R",
         configurable: false,
         writeable: true
-      });
+      }));
       
       var _stream;
-      Object.defineProperty(this, 'stream', {
+      Object.defineProperty(this, 'stream', Object.preventExtensions({
         enumerable: false,
         configurable: true,
         set: function (value) {
@@ -769,7 +769,7 @@
             return null;
           }
         }
-      });
+      }));
     };
 
     inherit(AcroFormXObject, AcroFormPDFObject);
@@ -779,7 +779,7 @@
       
       var _Kids = [];
       
-      Object.defineProperty(this, 'Kids', {
+      Object.defineProperty(this, 'Kids', Object.preventExtensions({
         enumerable: false,
         configurable: true,
         get: function () {
@@ -789,7 +789,7 @@
             return;
           }
         }
-      });
+      }));
       Object.defineProperty(this, 'Fields', Object.preventExtensions({
         enumerable: false,
         configurable: false,
