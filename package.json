@@ -84,6 +84,6 @@
     "test-training": "node spec/utils/reference-server.js",
     "delete-docs": "node deletedocs.js",
     "generate-docs": "./node_modules/.bin/jsdoc -c jsdoc.json --readme README.md",
-    "prepare": "npm run build"
+    "prepare": "node build.js && node build.js type=node"
   }
 }
