@@ -221,7 +221,7 @@ function test_images() {
             width: 45,
             height: 58
         });
-        doc.output('datauri');
+        doc.output('datauri', {filename: 'test.pdf'});
     };
     getImageFromUrl('thinking-monkey.jpg', createPDF);
 }
@@ -559,4 +559,11 @@ function test_addImage() {
     
     var doc = new jsPDF();  
     doc.addImage({imageData: '/image.png', x: 0, y: 0, width: 100, height: 100});
+}
+
+function test_loadFile() {
+    
+    var doc = new jsPDF();  
+    doc.loadFile('../image.png');
+    doc.loadFile('../image.png', false, function (data) {return data;});
 }
