@@ -1223,7 +1223,7 @@
               return;
           }
           if ((this instanceof AcroFormButton === false) ) {
-            return toPdfString(_V);
+            return '(' + _V + ')';
           }
           return _V;
         },
